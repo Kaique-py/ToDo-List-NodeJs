@@ -1,7 +1,7 @@
 const express = require('express')
-
+const tasksController = require('./controllers/tasksController')
 const router = express.Router()
 
-router.get('/', (req, res) => res.status(200).send('Página Inicial. Seja bem-vindo.'))
+router.get('/tasks', tasksController.getAll)
 
 module.exports = router
